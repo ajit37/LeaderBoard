@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>LeaderBoard</title>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">	</script>
+  <script src="data.json"></script>
+  <script src= "test.js"></script>
+</head>
+
+<body onLoad = "buildHtmlTable(0, '#excelDataTable')">
+  <input id="myInput" type="text" placeholder="Search..">
+  <br><br>
+  <select onchange="buildHtmlTable(this.options[this.selectedIndex].getAttribute('value'), '#excelDataTable')" name="select" id="criteria11">
+    <option value="0">--Please choose a Phase--</option>
+    <option msg = "You have selected Phase 1" value="1">Phase 1</option>
+    <option msg = "You have selected Phase 2" value="2">Phase 2</option>
+    <option msg = "You have selected Phase 3" value="3">Phase 3</option>
+  </select>
+
+  <table id="excelDataTable" border="1">  </table>
+</body>
+
+</html>
